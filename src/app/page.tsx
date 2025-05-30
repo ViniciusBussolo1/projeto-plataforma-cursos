@@ -1,8 +1,62 @@
+"use client";
+
 import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+
+const itemsCarousel = [
+  {
+    id: 1,
+    image: "/items-carousel/microsoft_logo.svg",
+    alt: "Microsoft",
+  },
+  {
+    id: 2,
+    image: "/items-carousel/walmart_logo.svg",
+    alt: "Walmart",
+  },
+  {
+    id: 3,
+    image: "/items-carousel/accenture_logo.svg",
+    alt: "Accenture",
+  },
+  {
+    id: 4,
+    image: "/items-carousel/adobe_logo.svg",
+    alt: "Adobe",
+  },
+  {
+    id: 5,
+    image: "/items-carousel/paypal_logo.svg",
+    alt: "Paypal",
+  },
+];
+
+const animation = { duration: 40000, easing: (t: number) => t };
+
 export default function Home() {
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    renderMode: "performance",
+    drag: false,
+    slides: {
+      perView: 4,
+      spacing: 30,
+    },
+    created(s) {
+      s.moveToIdx(5, true, animation);
+    },
+    updated(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+    animationEnded(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+  });
+
   return (
     <>
       <header className="w-full h-20 px-2 flex items-center justify-center border-b-[1px] border-gray-500">
@@ -63,9 +117,30 @@ export default function Home() {
             />
           </div>
 
-          <button className="w-36 h-11 text-white bg-blue-600 rounded-xl cursor-pointer hover:bg-blue-700">
+          <button className="w-36 h-11 text-white bg-blue-600 rounded-md cursor-pointer hover:bg-blue-700">
             Pesquisar
           </button>
+        </div>
+      </section>
+
+      <section className="w-full px-2 flex flex-col items-center justify-center gap-10 mt-9">
+        <h1 className="font-medium text-gray-600">Confiado por alunos de</h1>
+
+        <div
+          ref={sliderRef}
+          className="w-full max-w-[49.375rem] flex items-center keen-slider"
+        >
+          {itemsCarousel.map((item) => (
+            <div className="keen-slider__slide " key={item.id}>
+              <Image
+                src={item.image}
+                alt={item.alt}
+                width={140}
+                height={40}
+                className="object-contain"
+              />
+            </div>
+          ))}
         </div>
       </section>
     </>
