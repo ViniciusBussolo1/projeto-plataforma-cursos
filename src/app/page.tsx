@@ -62,7 +62,7 @@ export default function Home() {
       <header className="w-full h-20 px-2 flex items-center justify-center border-b-[1px] border-gray-500">
         <div className="w-6xl flex items-center justify-between ">
           <Link href={"/"}>
-            <Image src={"/logo.svg"} alt="Logo" width={115} height={34} />
+            <Image src={"/logo-black.svg"} alt="Logo" width={115} height={34} />
           </Link>
 
           <div className="flex items-center gap-9">
@@ -390,6 +390,79 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="w-full px-2 flex flex-col items-center justify-center mt-36 pb-12">
+        <div className="w-full max-w-[39.375rem]">
+          <h1 className="font-medium text-3xl text-black text-center">
+            Aprenda qualquer coisa, a qualquer hora, em qualquer lugar
+          </h1>
+          <p className="text-gray-500 text-center mt-4">
+            Incididunt sint fugiat pariatur cupidatat consectetur sit cillum
+            anim id veniam aliqua proident exceptheur commodo do ea.
+          </p>
+        </div>
+
+        <div className="mt-10 flex items-center gap-5">
+          <button className="w-36 h-11 bg-blue-600 text-white rounded-md cursor-pointer hover:bg-blue-700">
+            Comece a usar
+          </button>
+
+          <Link href={"*"}>Saiba mais</Link>
+        </div>
+      </section>
+
+      <footer className="w-full h-80 bg-gray-900 mt-40 flex flex-col items-center justify-center gap-5 px-2">
+        <div className="w-full max-w-[73.25rem] flex items-center justify-between border-b-[1px] border-gray-700 pb-10">
+          <div className="space-y-8">
+            <Image src={"/logo-white.svg"} alt="Logo" width={115} height={34} />
+
+            <p className="w-full max-w-96 text-white/80 text-sm leading-8">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            <h1 className="font-semibold text-white leading-8">Empresa</h1>
+
+            <nav>
+              <ul className="space-y-2">
+                <li className="text-white text-sm">Home</li>
+                <li className="text-white text-sm">Sobre nós</li>
+                <li className="text-white text-sm">Entre em contato</li>
+                <li className="text-white text-sm">Política de privacidade</li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className="space-y-8">
+            <h1 className="font-semibold text-white leading-8">
+              Assine nosso newsletter
+            </h1>
+
+            <p className="w-full max-w-[20.938rem] text-white text-sm ">
+              As últimas notícias, artigos e recursos, enviados semanalmente
+              para sua caixa de entrada.
+            </p>
+
+            <div className="flex items-center gap-2.5">
+              <input
+                type="text"
+                className="w-full max-w-[16.188rem] placeholder:text-gray-700 bg-gray-800 text-white text-sm p-2 rounded-md focus:outline-none border border-gray-700"
+                placeholder="Digite seu email"
+              />
+
+              <button className="w-36 h-[2.375rem] text-white bg-blue-600 rounded-md cursor-pointer hover:bg-blue-700 text-sm">
+                Susbcrição
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-white/60">
+          Copyright 2024 © Edemy. Todos os direitos reservados.
+        </p>
+      </footer>
     </>
   );
 }
