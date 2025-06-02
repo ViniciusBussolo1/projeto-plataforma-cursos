@@ -250,6 +250,146 @@ export default function Home() {
           Mostrar todos os cursos
         </button>
       </section>
+
+      <section className="w-full px-2 flex flex-col items-center justify-center mt-36">
+        <div className="w-full max-w-[39.375rem]">
+          <h1 className="font-medium text-3xl text-black text-center">
+            Depoimentos
+          </h1>
+          <p className="text-gray-500 text-center mt-4">
+            Ouça nossos alunos compartilharem suas jornadas de transformação,
+            sucesso e como nossa plataforma fez a diferença em suas vidas.
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-3 gap-8">
+          <div className="w-full max-w-80 p-6 space-y-7">
+            <div className="flex gap-6">
+              <Image
+                src={"/images-profile/profile-img-1.svg"}
+                alt="Profile"
+                width={50}
+                height={50}
+              />
+
+              <div>
+                <h4 className="font-medium text-lg text-gray-700">
+                  Donald Jackman
+                </h4>
+                <p className="font-medium text-xs text-gray-600">
+                  SWE 1 @ Amazon
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <Image
+                src={"/images-profile/stars.svg"}
+                alt="Stars"
+                width={103}
+                height={20}
+              />
+
+              <p className="text-sm text-gray-500">
+                Uso a imagify há quase dois anos, principalmente para o
+                Instagram, e ela tem sido incrivelmente fácil de usar,
+                facilitando muito o meu trabalho.
+              </p>
+            </div>
+
+            <Link
+              href={"*"}
+              className="text-sm text-blue-600 underline cursor-pointer"
+            >
+              Leia mais
+            </Link>
+          </div>
+
+          <div className="w-full max-w-80 p-6 space-y-7">
+            <div className="flex gap-6">
+              <Image
+                src={"/images-profile/profile-img-2.svg"}
+                alt="Profile"
+                width={50}
+                height={50}
+              />
+
+              <div>
+                <h4 className="font-medium text-lg text-gray-700">
+                  Donald Jackman
+                </h4>
+                <p className="font-medium text-xs text-gray-600">
+                  SWE 1 @ Amazon
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <Image
+                src={"/images-profile/stars.svg"}
+                alt="Stars"
+                width={103}
+                height={20}
+              />
+
+              <p className="text-sm text-gray-500">
+                Uso a imagify há quase dois anos, principalmente para o
+                Instagram, e ela tem sido incrivelmente fácil de usar,
+                facilitando muito o meu trabalho.
+              </p>
+            </div>
+
+            <Link
+              href={"*"}
+              className="text-sm text-blue-600 underline cursor-pointer"
+            >
+              Leia mais
+            </Link>
+          </div>
+
+          <div className="w-full max-w-80 p-6 space-y-7">
+            <div className="flex gap-6">
+              <Image
+                src={"/images-profile/profile-img-3.svg"}
+                alt="Profile"
+                width={50}
+                height={50}
+              />
+
+              <div>
+                <h4 className="font-medium text-lg text-gray-700">
+                  Donald Jackman
+                </h4>
+                <p className="font-medium text-xs text-gray-600">
+                  SWE 1 @ Amazon
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <Image
+                src={"/images-profile/stars.svg"}
+                alt="Stars"
+                width={103}
+                height={20}
+              />
+
+              <p className="text-sm text-gray-500">
+                Uso a imagify há quase dois anos, principalmente para o
+                Instagram, e ela tem sido incrivelmente fácil de usar,
+                facilitando muito o meu trabalho.
+              </p>
+            </div>
+
+            <Link
+              href={"*"}
+              className="text-sm text-blue-600 underline cursor-pointer"
+            >
+              Leia mais
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

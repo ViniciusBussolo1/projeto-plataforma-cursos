@@ -7,7 +7,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Platforma de Cursos",
+  title: "Edemy",
   description: "Plataforma para criação e gestão de cursos online",
 };
 
